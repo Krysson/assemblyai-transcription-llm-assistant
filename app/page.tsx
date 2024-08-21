@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     // TODO: replace by login mechanism and real IDs
     const userId = 'SampleUser_6d798e3c-9cd1-4018-8940-b3bed4816dee';
-    getUserTokenFunction(userId, 'Sample User');
+    getUserTokenFunction(userId, 'KryssonForge User');
   }, [getUserTokenFunction]);
 
   if (error) {
@@ -40,7 +40,7 @@ export default function Home() {
     const response = await fetch('/api/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId: userId }),
+      body: JSON.stringify({ userId: userId })
     });
 
     const responseBody = await response.json();
@@ -53,7 +53,7 @@ export default function Home() {
     const user: User = {
       id: userId,
       name: userName,
-      image: `https://getstream.io/random_png/?id=${userId}&name=${userName}`,
+      image: `https://getstream.io/random_png/?id=${userId}&name=${userName}`
     };
 
     const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
