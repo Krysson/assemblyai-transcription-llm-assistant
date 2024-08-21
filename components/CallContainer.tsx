@@ -8,7 +8,7 @@ import CallLayout from './CallLayout';
 export default function CallContainer({
   apiKey,
   user,
-  token,
+  token
 }: {
   apiKey: string;
   user: User;
@@ -20,11 +20,11 @@ export default function CallContainer({
   const videoClient = useVideoClient({
     apiKey,
     user,
-    tokenOrProvider: token,
+    tokenOrProvider: token
   });
 
   // TODO: replace by input mechanism
-  const callId = '123412341234';
+  const callId = '111818';
 
   const createCall = useCallback(async () => {
     const callToCreate = videoClient?.call('default', callId);
